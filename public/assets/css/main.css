@@ -1,0 +1,306 @@
+header {
+    background: rgb(101, 48, 153);
+    background: linear-gradient(265deg, rgba(101, 48, 153, 0.6113795860140931) 26%, rgba(255, 231, 11, 0.8858893899356618) 88%);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(101, 48, 153);
+    background: linear-gradient(265deg, rgba(101, 48, 153, 0.6113795860140931) 26%, rgba(255, 231, 11, 0.8858893899356618) 88%);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 auto;
+    padding: 7px 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo_text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text {
+    font-size: 2.5em;
+}
+
+.logo_container::after {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    height: 2px;
+    background: #ffbbbbe8;
+    content: "";
+}
+
+.logo_container {
+    display: inline-block;
+    width: 70%;
+    position: relative;
+}
+
+.menu {
+    display: inline-block;
+    width: 25%;
+}
+
+.connections {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 10px;
+    font-size: 1.2em;
+}
+
+.connections a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#disabled {
+    cursor: not-allowed;
+}
+
+.connections a:hover {
+    font-size: 1.4em;
+    color: #3d07ff;
+}
+
+.nav-menu {
+    margin: 0 auto;
+    padding: 5px 30px;
+}
+
+.nav-menu-item a {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.content {
+    background: url(../images/background.png);
+    background-size: cover;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 10px 120px;
+}
+
+.content p {
+    color: #000;
+    font-size: 2em;
+    font-style: italic;
+    text-shadow: 3px -2px 5px #f4bbb7;
+}
+
+
+/*Connections page*/
+
+.connections-nav {
+    background: url(../images/connections_bg.png);
+    background-size: cover;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 10px 50px;
+}
+
+.menu-items {
+    position: relative;
+    left: 33.33%;
+}
+
+.connections-nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.text_white {
+    color: #fff;
+    font-size: 1.35em;
+    text-decoration: none;
+}
+
+.menu-items ul li {
+    list-style-type: none;
+    line-height: 1.5em;
+}
+
+.menu-items ul li a:hover {
+    font-size: 1.75em;
+    color: #ff0000
+}
+
+.menu-items ul li i {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.menu-items ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*Connection page*/
+
+.connection-content {
+    background: url(../images/bg_detail.jpg);
+    background-size: cover;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 10px 50px;
+    float: left;
+    display: inline-block;
+    width: 85%;
+}
+
+.avatar {
+    float: left;
+    width: 15%;
+    display: inline-block;
+    margin: 40px auto;
+    padding: 10px 50px;
+}
+
+.avatar img {
+    border-radius: 50%;
+    max-height: 120px;
+}
+
+.pizza {
+    font-size: 2em;
+    color: #2f395d;
+}
+
+.action-btns {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.pizza-desc {
+    font-size: 1.5em;
+    color: #38372e;
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.now {
+    background: green;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    margin: 4px auto;
+}
+
+.later {
+    background: #80007c;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    margin: 4px auto;
+}
+
+.bulk {
+    background: #b0b040;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    margin: 4px auto;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+/* Saved Connections Page */
+
+.saved-content {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.saved-content table {
+    width: 100%;
+}
+
+.orderUpdate {
+    background: green;
+    border: none;
+    padding: 7px 15px;
+}
+
+.orderDelete {
+    background: #22c8a2;
+    border: none;
+    padding: 7px 15px;
+}
+
+.form-item {
+    margin: 25px 5px;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.loginfield {
+    height: 30px;
+    width: 150px;
+    margin: 5px 2px;
+    display: block;
+}
+
+.login-btn {
+    border: 0;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: #0fbbf0;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.hidden-field {
+    visibility: hidden;
+}
+
+.err {
+    color: red;
+    margin: 0 auto;
+    padding-left: 14%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/index.js"></script>
+    <title>Moonlight Eats</title>
+</head>
+
+<body>
+    <!-- Header ejs -->
+    <%- include('../partials/header',{user:user}) -%>
+    <div class="container">
+        <div class="saved-content">
+            <h2>
+                Orders
+            </h2>
+            <% if(userConnections.length > 0) {%>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Item Opinion(RSVP Action)</th>
+                    <th>Actions</th>
+                </tr>
+                <% for(j=0;j<=userConnections.length-1;j++){ %>
+                <tr>
+                    <td><%= userConnections[j].connection[0].itemName %></td>
+                    <td><%= userConnections[j].connection[0].typeOfFood %></td>
+                    <td><%= userConnections[j].rsvp %></td>
+                    <td>
+                        <form action="/connection" method="GET">
+                            <input type="hidden" name="ID" value="<%= userConnections[j].connection[0].connectionID %>">
+                            <input class="orderUpdate" type="submit" value="Update Order">
+                        </form>
+                        <form  action="/user/rsvpremove" method="POST">
+                            <input type="hidden" name="connID" value="<%= userConnections[j].connection[0].connectionID %>">
+                            <input class="orderDelete" type="submit" value="Delete Order">
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+
+                <!-- <tr>
+                    <td>Butter Chicken</td>
+                    <td>5</td>
+                    <td>
+                        <button class="orderUpdate" onclick="connectionRedirect()">Update Order</button>
+                        <button class="orderDelete" onclick="redirect()">Delete Order</button>
+                    </td>
+                </tr> -->
+            </table>
+           
+            <% } else { %>
+            <div>
+                <p class="align_center">
+                    <b>NO ITEMS (CONNECTIONS)!</b>
+                </p>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <!-- Footer ejs -->
+    <%- include('../partials/footer') -%>
+</body>
+
+</html>

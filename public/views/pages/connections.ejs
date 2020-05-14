@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>Moonlight Eats</title>
+</head>
+<body>
+	<!-- Header ejs -->
+	<%- include('../partials/header',{user:user}) -%>
+	<div class="container">
+
+		<div class="connections-nav">
+			<div class="menu-items">
+				<ul>
+				<% for(j=0;j<=unique.length-1;j++){ %>
+				<li class="text_white">
+					<i>The <%= unique[j] %> Menu</i>
+					<ul>
+
+						<% for(i=0;i<=querystring.length-1;i++){ %>
+                      	<% if(querystring[i].typeOfFood== unique[j]){ %>
+                    
+						<li><a href="../connection?ID=<%= querystring[i].connectionID %>"><%= querystring[i].itemName %></a></li>
+						<% } %>
+			 			<% } %>
+			  
+						<!-- <li><a href="connection">Naan Bread</a></li>
+						<li><a href="connection">Mango Lassi</a></li> -->
+					</ul>
+				</li>
+				<% } %>
+				</ul>
+			</div>
+			<div class="menu-items">
+				<p class="text_white"> Stay Tuned More to Come!</p>
+			</div>
+		</div>
+		
+		
+	</div>
+
+	<div>
+		
+	</div>
+
+	<!-- Footer ejs -->
+	<%- include('../partials/footer') -%>
+</body>
+</html>

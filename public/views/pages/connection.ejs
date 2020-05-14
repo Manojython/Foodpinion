@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>Moonlight Eats</title>
+</head>
+<body>
+	<!-- Header ejs -->
+	<%- include('../partials/header',{user:user}) -%>
+	<div class="container">
+		<div class="avatar">
+			<img src="images/avatar.png" alt="avatar">
+			<p class="profile-name">
+				Hello, Manoj !
+			</p>
+		</div>
+		
+		<div class="connection-content">
+			<% for(i=0;i<=querystring.length-1;i++){ %>
+		
+                   
+			<div>
+				
+				<div class="action-btns">
+					<h1 class="pizza"><span><i> Category:</i> </span> <%= querystring[i].typeOfFood %></h1>
+					<div class="">
+						<img src="<%= querystring[i].imageurl %>" alt="<%= querystring[i].itemName %>" width=250 height=250>
+					</div>
+					<h1 class="pizza"><i>RSVP actions</i></h1>
+					<form action="/user/rsvp/yes/<%= querystring[i].connectionID %>" method="POST">
+						<button class="now">Yes, I like this</button>
+					</form>
+					<form action="/user/rsvp/no/<%= querystring[i].connectionID %>" method="POST">
+						<button class="later">No, I don't want this</button>
+					</form>
+					<form action="/user/rsvp/maybe/<%= querystring[i].connectionID %>" method="POST">
+						<button class="bulk">Maybe I will like it</button>
+					</form>
+				</div>
+				<div class="pizza-desc">
+					<p class="pizza"><i><%= querystring[i].itemName %></i></p>
+					<p>
+						<%= querystring[i].details %>
+					</p>
+					<p>
+						<strong>Prep time</strong> : <%= querystring[i].cookingTime %>
+					</p>
+					<p>
+					   <strong>Store Locations</strong> : <i> <%= querystring[i].locations %>  </i>
+					</p>
+				</div>
+				
+			</div>
+			<%} %>
+		</div>
+		
+	</div>
+	<!-- Footer ejs -->
+	<%- include('../partials/footer') -%>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

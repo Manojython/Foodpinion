@@ -1,0 +1,104 @@
+use menu2
+====================================================
+db.createCollection("connections");
+
+db.connections.insert(
+{
+    "itemName": "Veggie Pizza",
+    "typeOfFood": "Vegan",
+    "details": "This top-rated, much-loved easy veggie pizza is a favorite go-to for potlucks, tailgate parties, showers, girls’ weekends—basically wherever there's a hungry crowd. Plus it's a brilliant way to use up whatever veggies you have at the ready.",
+    "cookingTime": "20mins",
+    "locations": "University Terrace, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/pizza.jpg",
+    "connectionID" : 1
+}
+
+);
+
+db.connections.insert(
+{
+    "itemName": "Naan Bread",
+    "typeOfFood": "Vegan",
+    "details": "Naan is a leavened, oven-baked flatbread found in the cuisines mainly of Iran, India, Western Asia, South Asia, Central Asia, Myanmar and the Caribbean",
+    "cookingTime": "20mins",
+    "locations": "University Terrace, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/naan-bread.jpg",
+    "connectionID" : 2
+}
+
+);
+
+
+db.connections.insert(
+{
+    "itemName": "Mango Lassi",
+    "typeOfFood": "Vegan",
+    "details": "Lassi is a popular traditional dahi-based drink that originated in the Indian subcontinent. Lassi is a blend of yoghurt, water, spices and sometimes fruit. Namkeen lassi is similar to doogh, while sweet and mango lassis are like milkshakes",
+    "cookingTime": "20mins",
+    "locations": "University Terrace, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/mango-lassi.jpg",
+    "connectionID" : 3
+}
+
+);
+
+db.connections.insert(
+{
+    "itemName": "Meat Lover's Pizza",
+    "typeOfFood": "Meat",
+    "details": "The perfect pizza crust topped with homemade pizza sauce, gooey cheese and tons of sausage, pepperoni and crumbled bacon! A meat lovers dream come true!",
+    "cookingTime": "20mins",
+    "locations": "Concord, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/Meat-Lovers-Pizza.jpg",
+    "connectionID" : 4
+}
+
+);
+
+db.connections.insert(
+{
+    "itemName": "Butter Chicken",
+    "typeOfFood": "Meat",
+    "details": "Butter Chicken simmers in a buttery tomato sauce and is punctuated by several special spices and herbs. Skip the Indian takeout and cook up your very own version of the popular dish!",
+    "cookingTime": "20mins",
+    "locations": "Concord, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/butter-chicken.jpg",
+    "connectionID" : 5
+}
+
+);
+
+db.connections.insert(
+{
+    "itemName": "Jamaican Pork Chops",
+    "typeOfFood": "Meat",
+    "details": "These sweet, spicy chops can be thrown together in minutes, but definitely don't taste like it. Serve it with a side of jasmine rice and you'll feel like you're on a tropical vacation",
+    "cookingTime": "20mins",
+    "locations": "Concord, Colville, North Tryon St, Mallard Creek",
+    "imageurl": "images/jamaican-pork.jpg",
+    "connectionID" : 6
+}
+
+);
+
+
+====================================================
+
+db.createCollection("users");
+
+db.users.insert({
+"firstName" : "Manoj",
+"lastName" : "Krishna Mohan",
+"email" : "mkrish14@uncc.edu",
+"password" : "$2b$10$1z5NdTC2DHH.7QrT/W5.du5m5eUQDFcMBdFwcdGL7QS1W0bJ.EGZu",
+"city" : "Charlotte,Mecklenberg County",
+"state" : "North Carolina"
+});
+====================================================
+db.createCollection("counters");
+
+db.counters.insert({
+    "id" : "connectionID",
+    "reference_value" : null,
+    "seq":6
+});

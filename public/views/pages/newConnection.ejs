@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>Moonlight Eats</title>
+</head>
+<body>
+	<!-- Header ejs -->
+	<%- include('../partials/header',{user:user}) -%>
+
+	<div class="container">
+		<div class="content">
+			<h2>Add a new Item and its Details!</h2>
+			<div class="form-container">
+			<form action="/additem" method="POST">
+				<div class="form-item">
+					<label><b>Food Type (Vegan or Meat)</b></label>
+					<!-- <select name="typeoffood">
+					  <option value="Vegan">Vegan</option>
+					  <option value="Meat">Meat</option>
+					</select> -->
+					<input type="text" name="typeoffood" placeholder="Vegan or Meat">
+				</div>
+				<div class="form-item">
+					<label><b>Food Item</b></label>
+					<input type="text" name="item">
+				</div>
+				<div class="form-item">
+					<label><b>Item Description</b></label>
+					<textarea name="details"></textarea> 
+				</div>
+				<div class="form-item">
+					<label><b>Cooking time</b></label>
+					<input type="text" name="time" >
+				</div>
+				<div class="form-item">
+					<label><b>Locations Made:</b></label>
+					<input type="text" name="locations">
+				</div>
+				<div class="form-item hidden-field">
+					
+					<input type="text" name="imageurl" value="images/pita.jpg">
+				</div>
+				<div class="form-item ">
+					
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+		</div>
+		
+		
+	</div>
+	<!-- Footer ejs -->
+	<%- include('../partials/footer') -%>
+</body>
+</html>

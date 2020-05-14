@@ -1,0 +1,46 @@
+<header>
+    <div class="container">
+        <div class="logo_container">
+            <a href="/">
+                <div class="logo">
+                    <img src="images/logo_transparent.png" alt="Logo" height="200" width="200">
+                </div>
+                <div class="logo_text">
+                    <p class="text">
+                        <i>Moonlight Eats</i>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="menu">
+            <ul>
+                <li class="connections"><a href="/newConnection">Order Online</a> </li>
+                <% if (user == null) { %>
+
+                    <li class="connections"><a href="/user/login">Login</a> </li>
+                    <li class="connections"><a href="/user/login">Sign Up</a> </li>
+                    <%} else { %>
+
+
+                        <li class="connections"><span class="pizza"><%=user.firstName%> </span> ,&nbsp; <a href="/user/logout">Logout</a></li>
+                        <% } %>
+
+            </ul>
+        </div>
+        <div class="nav-menu">
+            <p class="nav-menu-item"><a href="/connections"><i> Connections</i></a></p>
+        </div>
+    </div>
+</header>
+<% if (errors != null) { %>
+    <% errors.forEach(err => { %>
+        <div class="err">
+            <p>
+                <%= err.msg %>
+            </p>
+        </div>
+        <% }) %>
+
+            <% } %>

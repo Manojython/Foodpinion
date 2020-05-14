@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>Moonlight Eats</title>
+</head>
+<body>
+	<!-- Header ejs -->
+	<%- include('../partials/header',{user:user}) -%>
+	<div class="container">
+
+		<div class="content">
+			<h1>Contact Us</h1>
+			<p>
+				Phone: (123) 456-789
+				<br>
+				mail: abc@moonlighteats.com
+			</p>
+		</div>
+		
+	</div>
+	<!-- Footer ejs -->
+	<%- include('../partials/footer') -%>
+</body>
+</html>
