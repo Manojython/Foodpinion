@@ -7,7 +7,7 @@ Technologies used:
 - MonogDB
 
 
-To run application, after cloning, open '''cmd''' and run each commond listed in the database.txt to create the database.
+To run application, after cloning, open ```cmd``` and run each commond listed in the database.txt to create the database.
 Now,change directory to: '''public/controller'''
 '''
 node app.js
