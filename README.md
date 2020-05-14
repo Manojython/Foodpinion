@@ -5,3 +5,13 @@ An application which demonstrates the usage of Node.js to build a system with Us
 Technologies used:
 - Node.js
 - MonogDB
+
+
+To run application, after cloning, open '''cmd''' and run each commond listed in the database.txt to create the database.
+Now,change directory to: '''public/controller'''
+'''
+node app.js
+'''
+
+Now in your browser navigate to **127.0.0.1:8084** or to **localhost:8084**
+
